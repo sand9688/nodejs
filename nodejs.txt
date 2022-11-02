@@ -1,0 +1,47 @@
+설치
+    1. npm init
+    2. npm i express
+
+셋팅
+    1. config(ex) api key 값)
+    2. public(ex) 정적파일)
+    3. router
+    4. views(ex) 동적파일)
+
+pm2  실행
+
+    pm2 start [서버파일명] --watch
+        -> 서버 실행 * --watch 옵션
+
+    pm2 kill
+        -> 전체 서버파일 중지
+
+    pm2 list
+        -> 실행되고 있는 서버파일확인
+
+    pm2 monit
+        -> 실행되고있는 서버파일 모니터링
+
+    npm i pm2 --save
+
+html req -> html 에 정보 가져오기
+html res -> html 에 정보 전달 하기
+    =>res.writeHead(코드번호, {"Content-Type":{타입설정}});
+      res.write();
+      res.end();
+
+get => url 을 통한 데이터 전송 -> querystring
+    1. 보안의 취약하다
+    2. 데이터 크기에 제한
+    3. 빠르다
+post => 패킷을 통한 데이터 전송
+        => 패킷 구조 => header + body
+    1. 보안 상 좋음
+    2. 데이터 크기에 제한 없음
+    3. get 방식 보다 느리다
+
+
+
+npm i express-session --save => 세션 사용 가능 하게 설치
+
+npm i express-mysql-session --save  => 세션 저장 공간
